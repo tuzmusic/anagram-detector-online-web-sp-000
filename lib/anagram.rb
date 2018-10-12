@@ -7,7 +7,7 @@ def initialize(word)
 end
 
 def match(words) # => array of anagrams, or an empty array
-  words.any? { |poss|
+  matches = words.any? { |poss|
     poss_letters = poss.split("")
     my_letters = word.split("")
     poss_letters.sort == my_letters.sort
